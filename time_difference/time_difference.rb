@@ -8,12 +8,23 @@ def my_min(list)
     larger = false
     list.each do |num2|  #O(n)
       larger = true if num1 > num2 #O(1)
+      
       # if num2 is greater than num1, then larger = true
     end
     smallest = num1 unless larger  #O(1)
     
   end
   smallest
+end
+
+def my_min_other(list)
+  min = list[0]
+  
+  list.each do |x|
+    min = x if min > x 
+  end
+  
+  min
 end
 
 
